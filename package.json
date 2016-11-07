@@ -1,0 +1,11 @@
+{
+  "name": "frontendTechStack",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "author": "Richard",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {}
+}
