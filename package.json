@@ -7,5 +7,7 @@
   "scripts": {
     "start": "node ."
   },
-  "dependencies": {}
+  "dependencies": {
+    "color": "^0.11.4"
+  }
 }
