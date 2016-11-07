@@ -1,5 +1,5 @@
-const Dog = require('./dog');
+import Cat from './dog';
 
-const toby = new Dog('Toby');
+const toby = new Cat('Toby');
 
 console.log(toby.bark());
