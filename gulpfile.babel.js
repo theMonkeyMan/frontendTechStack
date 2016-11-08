@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, no-console */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import gulp from 'gulp';
 import babel from 'gulp-babel';
@@ -11,7 +11,8 @@ const paths = {
   allSrcJs: 'src/**/*.js?(x)',
   serverSrcJs: 'src/server/**/*.js?(x)',
   sharedSrcJs: 'src/shared/**/*.js?(x)',
-  clientEntryPoint: 'src/client/app.js?(x)',
+  clientEntryPoint: 'src/client/app.jsx',
+  clientBundle: 'dist/client-bundle.js?(.map)',
   gulpFile: 'gulpfile.babel.js',
   webpackFile: 'webpack.config.babel.js',
   libDir: 'lib',
@@ -34,7 +35,7 @@ gulp.task('clean', () => del([
   paths.clientBundle,
 ]));
 
-gulp.task('build', ['lint'], () =>
+gulp.task('build', ['lint', 'clean'], () =>
   gulp.src(paths.allSrcJs)
     .pipe(babel())
     .pipe(gulp.dest(paths.libDir))
