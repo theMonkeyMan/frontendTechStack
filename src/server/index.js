@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import Cat from './dog';
+import Cat from '../shared/dog';
 
 const toby = new Cat('Toby');
 

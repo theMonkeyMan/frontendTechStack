@@ -4,3 +4,4 @@ node_modules
 .idea
 frontendTechStack.iml
 lib
+/dist/client-bundle.js*
