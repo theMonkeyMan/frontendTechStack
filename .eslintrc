@@ -24,11 +24,11 @@
     "react/jsx-no-bind": 0,
     "react/jsx-indent-props": 0,
     "no-unused-expressions": 0,
+    "no-unused-vars": 0,
     "no-param-reassign": 0,
     "react/jsx-closing-brachet-location": 0,
     "no-trailing-spaces": 0,
     "react/jsx-boolean-value": 0,
-
     "no-mixed-spaces-and-tabs": 0,
     "func-names": 0,
     "react/no-multi-comp": 0,
