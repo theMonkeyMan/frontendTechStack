@@ -1,1 +1,8 @@
 本项目效仿https://github.com/pd4d10/js-stack-from-scratch 从零构建前端技术栈,仅供开发者学习.
+
+使用方法:
+1.在根目录中执行yarn install
+
+2.在yarn install执行完成之后执行yarn start
+
+3.打开dist文件夹中的index.html即可查看效果
