@@ -1,4 +1,4 @@
-import {MAKE_BARK} from '../actions/dog-actions';
+import {MAKE_BARK, NO_BARK} from '../actions/dog-actions';
 
 const initialState = {
   hasBarked: false,
@@ -8,6 +8,8 @@ const dogReducer = (state = initialState, action)=> {
   switch (action.type) {
     case MAKE_BARK:
       return {hasBarked: action.payload};
+    case NO_BARK:
+      return {hasBarked: action.payload}
     default:
       return state;
   }

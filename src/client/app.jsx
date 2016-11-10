@@ -16,7 +16,9 @@ import BarkButton from './containers/bark-button';
 
 import logMiddle from './applyMiddlewares/logMiddle';
 
-const diy_createStore = applyMiddleware(logMiddle)(createStore);
+import secondMiddle from './applyMiddlewares/secondMiddle';
+
+const diy_createStore = applyMiddleware(logMiddle,secondMiddle)(createStore);
 
 const store = diy_createStore(combineReducers({
   dog: dogReducer,

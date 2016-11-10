@@ -2,13 +2,16 @@ import {connect} from 'react-redux';
 
 import Button from '../components/button';
 
-import {makeBark} from '../actions/dog-actions';
+import {makeBark, noBark} from '../actions/dog-actions';
 
-const mapStateToProps = state=>state;
+const mapStateToProps = state=> ({state});
 
 const mapDispatchToProps = (dispatch, ownProps)=>({
   action: ()=> {
-    dispatch(makeBark(!ownProps.isBark));
+    dispatch(makeBark());
+  },
+  noAction: ()=> {
+    dispatch(noBark());
   },
   actionLabel: 'Bark'
 });

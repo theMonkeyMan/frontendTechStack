@@ -1,9 +1,18 @@
 import React, {PropTypes} from 'react';
 
 const Button = (props)=> {
-  const {action, actionLabel} = props;
-  return (<button onClick={action} >{actionLabel}</button>)
-};
+
+  const {action, noAction, actionLabel} = props;
+  const onHandler = ()=> {
+    const {state} = props;
+    if (state.dog.hasBarked) {
+      noAction();
+    } else {
+      action();
+    }
+  }
+  return (<button onClick={onHandler}>{actionLabel}</button>)
+}
 
 Button.propTypes = {
   action: PropTypes.func.isRequired,
