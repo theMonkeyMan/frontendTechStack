@@ -4,9 +4,11 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 
 import {Provider} from 'react-redux';
+
+import {combineReducers} from 'redux-immutable';
 
 import dogReducer from './reducers/dog-reducer';
 

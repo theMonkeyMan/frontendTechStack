@@ -5,7 +5,7 @@ const Button = (props)=> {
   const {action, noAction, actionLabel} = props;
   const onHandler = ()=> {
     const {state} = props;
-    if (state.dog.hasBarked) {
+    if (state.getIn(['dog','hasBarked'])) {
       noAction();
     } else {
       action();

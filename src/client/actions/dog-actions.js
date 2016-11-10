@@ -1,12 +1,8 @@
+import {createAction} from 'redux-actions';
+
 export const MAKE_BARK = 'MAKE_BARK';
 export const NO_BARK = 'NO_BARK';
 
-export const makeBark = () =>({
-  type: MAKE_BARK,
-  payload: true,
-});
+export const makeBark = createAction(MAKE_BARK, ()=>true);
 
-export const noBark = () =>({
-  type: NO_BARK,
-  payload: false,
-});
+export const noBark = createAction(NO_BARK, ()=>false);
