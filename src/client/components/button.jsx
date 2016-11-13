@@ -10,9 +10,9 @@ const Button = (props)=> {
     } else {
       action();
     }
-
-    return (<button onClick={onHandler}>{actionLabel}</button>)
   }
+
+  return (<button onClick={onHandler}>{actionLabel}</button>)
 }
 
 Button.PropTypes = {
