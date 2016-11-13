@@ -6,3 +6,11 @@
 2.在yarn install执行完成之后执行yarn start
 
 3.打开dist文件夹中的index.html即可查看效果
+
+使用flow做静态类型检查器时,如果出现以下问题:
+Error: spawn */node_modules/flow-bin/vendor/flow ENOENT
+
+仔细检查以后发现是gulp-flowtype模块中的package.json中有flow-bin模块的依赖.
+在gulpfile.babel.js中写入了flow检查任务会去调用flow-bin模块的cli编译.
+但是上面的Error说明flow-bin模块未下载完整,毕竟great fire wall,如果网络不好,
+建议直接在github搜索flow-bin模块下载到对应的node_modules目录中即可.
