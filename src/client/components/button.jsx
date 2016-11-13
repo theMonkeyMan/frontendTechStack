@@ -5,18 +5,19 @@ const Button = (props)=> {
   const {action, noAction, actionLabel} = props;
   const onHandler = ()=> {
     const {state} = props;
-    if (state.getIn(['dog','hasBarked'])) {
+    if (state.getIn(['dog', 'hasBarked'])) {
       noAction();
     } else {
       action();
     }
+
+    return (<button onClick={onHandler}>{actionLabel}</button>)
   }
-  return (<button onClick={onHandler}>{actionLabel}</button>)
 }
 
-Button.propTypes = {
+Button.PropTypes = {
   action: PropTypes.func.isRequired,
-  actionLabel: PropTypes.string.isRequired,
+  actionLabel: PropTypes.string.isRequired
 };
 
 export default Button;
