@@ -2,6 +2,7 @@ npm-debug.log
 yarn-error.log
 node_modules
 .idea
+.vscode
 frontendTechStack.iml
 lib
 /dist/client-bundle.js*

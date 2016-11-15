@@ -28,10 +28,10 @@ gulp.task('lint', () =>
     paths.gulpFile,
     paths.webpackFile,
   ])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(flow({abort: true})) // Add Flow here
+    // .pipe(eslint())
+    // .pipe(eslint.format())
+    // .pipe(eslint.failAfterError())
+    // .pipe(flow({abort: true})) // Add Flow here
 );
 
 gulp.task('clean', () => del([

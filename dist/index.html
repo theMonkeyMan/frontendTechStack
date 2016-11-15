@@ -1,9 +1,20 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
 </head>
 <body>
-<div class="app"></div>
-<script src="client-bundle.js"></script>
+    <div class="app"></div>
+    <script type="text/javascript" src="socket.io.js"></script>
+    <script type="text/javascript" src="client-bundle.js"></script>
+    <script type="text/javascript">
+        var socket = io('http://localhost:8000');
+        socket.on('news', function (data) {
+            alert(data);
+        });
+    </script>
 </body>
 </html>
+

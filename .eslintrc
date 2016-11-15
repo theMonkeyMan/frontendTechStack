@@ -2,13 +2,17 @@
 // Copy this file, and add rule overrides as needed.
 {
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "react"
   ],
   "extends": [
-    "airbnb"
+    "airbnb",
+    "plugin:flowtype/recommended"
   ],
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "quotes": 0,
@@ -41,6 +45,8 @@
     "comma-dangle": 0,
     "react/prop-types": 0,
     "no-console": 0,
+    "no-path-concat": 0,
+    "prefer-es6-class":0,
     "new-cap": [
       2,
       {
